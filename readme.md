@@ -21,5 +21,5 @@ docker build -t verification .
 docker run \
   --interactive --tty --rm \
   --env EV_VAR="$SOME_ENV_VAR" \
-  executable_name -x <param_x>
+  verification -x <param_x>
 ```
