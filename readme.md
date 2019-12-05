@@ -19,7 +19,8 @@ docker build -t verification .
 
 ```
 docker run \
-  --interactive --tty --rm \
-  --env EV_VAR="$SOME_ENV_VAR" \
-  verification -x <param_x>
+  --rm \
+  --interactive --tty \
+  -v $PWD:/projects \
+  verification bash
 ```
