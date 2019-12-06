@@ -4,18 +4,19 @@ To simplify simulation and verification steps.
 
 ### What is it
 
-A "magic-free" (i.e. not using another untraceble container as a base) 
-**minimalist** docker container for `verilator` and Icarus `iverilog`.
+A "magic-free" (i.e. not using another untraceble container as a base)
+**minimalist** docker container for `verilator`, Icarus `iverilog`,
+and a few more for formal verification env.
 
 ### Using with docker
 
-* Build container
+* Build
 
 ```
 docker build -t verification .
 ```
 
-* Run from container
+* Run
 
 ```
 docker run \
