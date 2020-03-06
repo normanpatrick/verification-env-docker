@@ -66,6 +66,8 @@ RUN git clone https://bitbucket.org/arieg/extavy.git && \
   cp avy/src/avybmc /usr/local/bin/ && \
   cd ../..
 
+RUN rm -rf SymbiYosys  boolector  extavy  yices2  z3
+
 USER appuser
 
 # COPY executable_name .
