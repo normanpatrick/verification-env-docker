@@ -68,6 +68,17 @@ RUN git clone https://bitbucket.org/arieg/extavy.git && \
 
 RUN rm -rf SymbiYosys  boolector  extavy  yices2  z3
 
+RUN apt-get install -y \
+    gnat zlib1g-dev
+
+# Install GHDL
+# https://ghdl.readthedocs.io/en/latest/using/QuickStartGuide.html
+RUN git clone https://github.com/ghdl/ghdl && \
+    cd ghdl && \
+    ./configure --prefix=/usr/local && \
+    make && \
+    make install
+
 USER appuser
 
 # COPY executable_name .
